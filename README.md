@@ -50,3 +50,13 @@ ECG_Arrhythmia_Project/
 └── data/                    # Dataset (CSV Files)
 ├── normal_patient.csv
 └── abnormal_patient.csv
+
+## How to Run Locally
+
+### 1. Prerequisites Ensure you have **Python** and **Anaconda** installed on your system.
+
+### 2. Installation Open your terminal/command prompt and navigate to the project directory:
+
+```bash
+
+cd path/to/ECG_Arrhythmia_Project
