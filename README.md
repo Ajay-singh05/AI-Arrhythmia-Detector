@@ -1,62 +1,168 @@
-# ❤️ AI-Powered ECG Arrhythmia Detection System
+# 🫀 AI Arrhythmia Detector (Logistic Regression)
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![ML](https://img.shields.io/badge/Model-Random%20Forest-green)
-![Framework](https://img.shields.io/badge/Frontend-Streamlit-red)
+An end-to-end **AI-based ECG Arrhythmia Detection system** built using **Logistic Regression**. This project focuses on preprocessing raw ECG signals, extracting meaningful features, and classifying heartbeats to detect arrhythmias with high accuracy.
+
+---
 
 ## 📌 Project Overview
-Cardiovascular diseases (CVDs) are the leading cause of death globally. Early detection of arrhythmias (irregular heartbeats) is crucial for prevention. 
 
-This project is a **Machine Learning-based Web Application** that analyzes ECG signals from CSV files to detect arrhythmias. It uses a **Random Forest Classifier** to distinguish between **Normal** and **Abnormal** heartbeats with high accuracy. The system provides an interactive dashboard for doctors and medical staff to visualize ECG signals, calculate Heart Rate (BPM), and view a risk assessment report.
+Cardiac arrhythmias are irregular heart rhythms that can be life-threatening if not detected early. This project leverages **machine learning (Logistic Regression)** to automatically classify ECG signals and assist in early diagnosis.
 
----
+The system performs:
 
-## 🚀 Key Features
-* **Instant Diagnosis:** Classifies ECG signals as 'Normal Rhythm' or 'Arrhythmia Detected' in seconds.
-* **Interactive Visualization:** Zoomable ECG graphs to analyze specific heartbeats.
-* **AI Beat Analysis:** Visual markers (Red/Green dots) indicating exactly where the model detected anomalies.
-* **Heart Rate Calculation:** Automatically computes the patient's BPM (Beats Per Minute).
-* **Risk Score:** Provides a percentage-based risk assessment based on the ratio of abnormal beats.
-* **Medical-Grade Report:** Generates a professional diagnosis card suitable for screening purposes.
+* ECG signal preprocessing
+* Feature extraction
+* Model training using Logistic Regression
+* Performance evaluation
 
 ---
 
-## 🛠️ Technology Stack
-* **Programming Language:** Python
-* **Frontend Framework:** Streamlit
-* **Machine Learning:** Scikit-Learn (Random Forest Classifier)
-* **Signal Processing:** SciPy (Butterworth Filters, Peak Detection)
-* **Data Manipulation:** Pandas, NumPy
-* **Visualization:** Matplotlib, Streamlit Charts
+## 🚀 Features
+
+* ECG signal filtering and normalization
+* Feature extraction from ECG signals
+* Binary / multi-class arrhythmia classification
+* Trained Logistic Regression model
+* Evaluation using accuracy, precision, recall, and confusion matrix
+* Modular and well-documented Jupyter notebooks
+
+---
+
+## 🧠 Machine Learning Model
+
+* **Algorithm:** Logistic Regression
+* **Why Logistic Regression?**
+
+  * Simple and interpretable
+  * Works well for medical classification problems
+  * Fast training and inference
 
 ---
 
 ## 📂 Project Structure
-ECG_Arrhythmia_Project/
+
+```
+AI-Arrhythmia-Detector/
 │
-├── app.py                   # Main Application File (Streamlit)
-├── requirements.txt         # List of dependencies
-├── README.md                # Project Documentation
+├── data/
+│   ├── raw/                # Raw ECG data
+│   ├── processed/          # Preprocessed signals
 │
-├── models/                  # Trained ML Models
-│   ├── rf_ecg_model.pkl     # Random Forest Model
-│   └── scaler.pkl           # Standard Scaler
-│
-├── notebooks/               # Jupyter Notebooks for Training
+├── notebooks/
 │   ├── 01_data_loading.ipynb
-│   ├── ...
-│   └── 08_final_prediction.ipynb
+│   ├── 02_signal_preprocessing.ipynb
+│   ├── 03_feature_extraction.ipynb
+│   ├── 04_model_training.ipynb
+│   ├── 05_model_evaluation.ipynb
+│   ├── 06_model_saving.ipynb
+│   └── 07_end_to_end_pipeline.ipynb
 │
-└── data/                    # Dataset (CSV Files)
-├── normal_patient.csv
-└── abnormal_patient.csv
+├── models/
+│   └── logistic_regression_model.pkl
+│
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
 
-## How to Run Locally
+---
 
-### 1. Prerequisites Ensure you have **Python** and **Anaconda** installed on your system.
+## 📊 Dataset
 
-### 2. Installation Open your terminal/command prompt and navigate to the project directory:
+* ECG data sourced from publicly available datasets (e.g., MIT-BIH Arrhythmia Dataset)
+* Signals include both normal and arrhythmic heartbeats
+
+> **Note:** Ensure dataset licensing is followed before reuse.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
 
 ```bash
+git clone https://github.com/your-username/ai-arrhythmia-detector.git
+cd ai-arrhythmia-detector
+```
 
-cd path/to/ECG_Arrhythmia_Project
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run the Notebooks
+
+Open Jupyter Notebook or Jupyter Lab and run the notebooks in sequence:
+
+```bash
+jupyter notebook
+```
+
+---
+
+## 📈 Model Evaluation
+
+The model is evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* Confusion Matrix
+
+Sample performance:
+
+* **Accuracy:** ~98% (may vary based on dataset and preprocessing)
+
+---
+
+## 🧪 Results
+
+* Logistic Regression successfully classifies ECG signals
+* High accuracy with proper preprocessing
+* Demonstrates feasibility of ML-based ECG diagnosis
+
+---
+
+## 🛠️ Tools & Technologies
+
+* Python 🐍
+* NumPy
+* Pandas
+* SciPy
+* Scikit-learn
+* Matplotlib
+* WFDB
+* Jupyter Notebook
+
+---
+
+## 🔮 Future Improvements
+
+* Use advanced models (Random Forest, SVM, CNN, LSTM)
+* Real-time ECG signal classification
+* Web or mobile application interface
+* Multi-class arrhythmia detection
+* Model explainability (SHAP / LIME)
+
+---
+
+## 👨‍💻 Contributors
+
+* **Abhinav Dongre** – Project Development & ML Pipeline
+* **Ajay Singh** – Project Development & ML Pipeline
+
+---
+
+
+
+## ⭐ Acknowledgements
+
+* MIT-BIH Arrhythmia Database
+* Scikit-learn Documentation
+* Open-source ML community
+
+
+
+> 💡 *This project is intended for academic and research purposes only and should not replace professional medical dia
